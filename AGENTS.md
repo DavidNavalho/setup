@@ -6,8 +6,10 @@ This repository is intended to be safe to run repeatedly on macOS to bootstrap a
 
 - **No secrets in git.** Never commit tokens, PATs, passwords, private keys, `.env` with secrets, SSH keys, etc.
 - **PR-only changes.** Do not push to `main`. All changes happen on a branch and land via a Pull Request.
+- **Auto-merge allowed (after approval).** If required reviews are satisfied and the PR is mergeable per branch rules, the agent may merge (typically squash), unless the owner says otherwise on that PR.
 - **Idempotent by default.** Scripts should be safe to run multiple times.
 - **Prefer small PRs.** Keep changes reviewable; explain what you changed and how to test.
+- **No spam.** Avoid repeated "intent check" comments. If you already asked questions and there’s no owner reply yet, wait.
 
 ## What an agent may do
 
@@ -17,7 +19,7 @@ This repository is intended to be safe to run repeatedly on macOS to bootstrap a
 
 ## What an agent must not do
 
-- Merge PRs (unless the owner explicitly asks).
+- Merge PRs **unless they meet the repo rules and are approved** (auto-merge is allowed once approval requirements are satisfied).
 - Introduce secret handling that stores secrets in the repo.
 - Run destructive commands (e.g., deleting user data) without explicit confirmation.
 
