@@ -7,6 +7,8 @@ This repository is intended to be safe to run repeatedly on macOS to bootstrap a
 - **No secrets in git.** Never commit tokens, PATs, passwords, private keys, `.env` with secrets, SSH keys, etc.
 - **PR-only changes.** Do not push to `main`. All changes happen on a branch and land via a Pull Request.
 - **Auto-merge allowed (after approval).** If required reviews are satisfied and the PR is mergeable per branch rules, the agent may merge (typically squash), unless the owner says otherwise on that PR.
+  - **Clarification:** an **OWNER** review with state **APPROVED** (often with “LGTM”) counts as an explicit go-ahead to merge.
+  - If there is an **OWNER** review with **CHANGES_REQUESTED**, do not merge until it is resolved.
 - **Idempotent by default.** Scripts should be safe to run multiple times.
 - **Prefer small PRs.** Keep changes reviewable; explain what you changed and how to test.
 - **No spam.** Avoid repeated "intent check" comments. If you already asked questions and there’s no owner reply yet, wait.
