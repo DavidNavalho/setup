@@ -27,6 +27,27 @@ This repository is intended to be safe to run repeatedly on macOS to bootstrap a
 - Commit style: concise, imperative (e.g., `chore: add bootstrap skeleton`)
 - Include a **Test plan** in PR descriptions.
 
+## Issue intake (owner requests)
+
+When the owner opens an Issue (feature request / change request), the agent should **first validate intent** before implementing.
+
+**Step 1 — restate the goal:**
+- Summarize what you think the owner wants in 1–3 bullets.
+
+**Step 2 — confirm scope & constraints:**
+- What is in-scope / out-of-scope for this change?
+- Any idempotency concerns?
+- Any security/privacy concerns (secrets, data deletion, etc.)?
+
+**Step 3 — propose an approach:**
+- Outline a minimal implementation plan.
+- Call out alternatives and trade-offs if relevant.
+
+**Step 4 — get a “go” signal:**
+- Ask for confirmation (a short “yes/ship it” is enough) before doing non-trivial work.
+
+Once confirmed, implement on a branch and open a PR linking the Issue.
+
 ## macOS bootstrap principles
 
 - Detect before changing (e.g., check if Homebrew exists before installing).
