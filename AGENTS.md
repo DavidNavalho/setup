@@ -29,7 +29,9 @@ This repository is intended to be safe to run repeatedly on macOS to bootstrap a
 
 - Branch naming: `feature/...`, `chore/...`, `fix/...`
 - Commit style: concise, imperative (e.g., `chore: add bootstrap skeleton`)
-- Include a **Test plan** in PR descriptions.
+- PR descriptions must include:
+  - a **Test plan**
+  - an **Issue auto-close link** when applicable (e.g., `Fixes #123`, `Closes #123`, `Resolves #123`) so GitHub auto-closes the issue on merge.
 
 ## Issue intake (owner requests)
 
